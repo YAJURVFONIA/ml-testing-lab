@@ -19,4 +19,4 @@ def scale_0_to_1(values):
     low, high = min(values), max(values)
     if high == low:
         return [0.0 for v in values]
-    return [(v - low) / high for v in values]
+    return [(v - low) / (high - low) for v in values]
